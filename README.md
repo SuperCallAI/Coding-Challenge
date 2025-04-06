@@ -38,13 +38,16 @@ Collect address -> Finalize Sale: Transition after the customer provides their f
 So if the global prompt was:
 `Your name is Jason, always be nice.`
 
-And we are in the introduction state, then the full prompt would be:
+And we are in the `Introduction` state, then the full prompt would be:
 ```
 Your name is Jason, always be nice.
 The goal of this state is to say hi to the customer and ask how their day is going
 ```
 
-These states are ust examples, the user can define their own states, global prompt, and conditions.
+When the customer replies how their day is going, we will transition to the `Make Sale` state, because it matches this condition:
+`Make sale -> Collect address: Transition when the customer agrees to purchasing the product.`
+
+These states are just examples, the user can define their own states, global prompt, and conditions.
 
 The app should also feature a Test Mode where users can interact with their agent and see real-time state transitions.
 
