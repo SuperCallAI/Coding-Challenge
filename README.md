@@ -19,7 +19,7 @@ And our builder had some edges between the states, so its set up like this:
 
 `Introduction -> Make Sale (convince customer to buy) -> Collect Address -> Finalize Sale`
 
-In these states is the following:
+In these states is the following prompts:
 - `Introduction: The goal of this state is to say hi to the customer and ask how their day is going`
 - `Make Sale: The goal of this state is to convince the customer to buy something (shoes or something)`
 - `Collect Address: The goal of this state is to collect the customers address so we can ship them the product`
