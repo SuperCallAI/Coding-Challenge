@@ -6,7 +6,16 @@ Your task is to build a drag-and-drop state-based LLM builder where users can vi
 
 ## Example
 Let me explain it in stupid simple terms. Imagine you are creating an AI, and the prompt is created by gluing together 2 smaller prompts. The "global prompt", and the "state prompt".
-The global prompt is always the same (no matter what state you are in). But the state prompt is going to change depending on what "state" the AI is in. So you could imagine this flow:
+The global prompt is always the same (no matter what state you are in). But the state prompt is going to change depending on what "state" the AI is in. 
+Imagine we had 4 states:
+```
+- Introduction
+- Make Sale
+- Collect Address
+- Finalize Sale`
+```
+
+And our builder had some edges between the states, so its set up like this:
 
 `Introduction -> Make Sale (convince customer to buy) -> Collect Address -> Finalize Sale`
 
