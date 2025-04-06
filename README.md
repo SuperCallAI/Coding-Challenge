@@ -5,7 +5,7 @@
 Your task is to build a drag-and-drop state-based LLM builder where users can visually create AI agents with different conversational states. The system will allow users to define a global prompt, configure state-specific prompts, and define edges (transitions) between states.
 
 Let me explain it in stupid simple terms. Imagine you are creating an AI, and the prompt is created by gluing together 2 smaller prompts. The "global prompt", and the "state prompt".
-Now, the global prompt is always the same. The state prompt is going to change depending on what "state" the AI is in. So you could imagine this flow:
+The global prompt is always the same (no matter what state you are in). But the state prompt is going to change depending on what "state" the AI is in. So you could imagine this flow:
 
 `Introduction -> Make Sale (convince customer to buy) -> Collect Address -> Finalize Sale`
 
