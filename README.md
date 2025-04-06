@@ -16,9 +16,13 @@ In these states is the following:
 - `Finalize Sale: The goal of this state is to thank the customer for their order and tell them itll be there within 5-10 days`
 
 Now, there are "edges" between these states. For example, we do not transition between the "make sale" state to the "collect address" state if the customer does not want to buy.
+
 So we stay in a state until the "Edge condition is met". In this situation, we might have the following edge conditions:
+
 `Introduction -> Make Sale: Transition immediately after the customer tells you how their day is`
+
 `Make sale -> Collect address: Transition when the customer agrees to purchasing the product.`
+
 `Collect address -> Finalize Sale: Transition after the customer provides their full address (every required piece)`
 
 So if the global prompt was:
