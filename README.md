@@ -6,7 +6,9 @@ Your task is to build a drag-and-drop state-based LLM builder where users can vi
 
 Let me explain it in stupid simple terms. Imagine you are creating an AI, and the prompt is created by gluing together 2 smaller prompts. The "global prompt", and the "state prompt".
 Now, the global prompt is always the same. The state prompt is going to change depending on what "state" the AI is in. So you could imagine this flow:
+
 `Introduction -> Make Sale (convince customer to buy) -> Collect Address -> Finalize Sale`
+
 In these states is the following:
 - `Introduction: The goal of this state is to say hi to the customer and ask how their day is going`
 - `Make Sale: The goal of this state is to convince the customer to buy something (shoes or something)`
@@ -18,6 +20,16 @@ So we stay in a state until the "Edge condition is met". In this situation, we m
 `Introduction -> Make Sale: Transition immediately after the customer tells you how their day is`
 `Make sale -> Collect address: Transition when the customer agrees to purchasing the product.`
 `Collect address -> Finalize Sale: Transition after the customer provides their full address (every required piece)`
+
+So if the global prompt was:
+`Your name is Jason, always be nice.`
+
+And we are in the introduction state, then the full prompt would be:
+```Your name is Jason, always be nice.
+The goal of this state is to say hi to the customer and ask how their day is going
+```
+
+These states are ust examples, the user can define their own states, global prompt, and conditions.
 
 The app should also feature a Test Mode where users can interact with their agent and see real-time state transitions.
 
