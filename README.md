@@ -4,6 +4,7 @@
 
 Your task is to build a drag-and-drop state-based LLM builder where users can visually create AI agents with different conversational states. The system will allow users to define a global prompt, configure state-specific prompts, and define edges (transitions) between states.
 
+## Example
 Let me explain it in stupid simple terms. Imagine you are creating an AI, and the prompt is created by gluing together 2 smaller prompts. The "global prompt", and the "state prompt".
 The global prompt is always the same (no matter what state you are in). But the state prompt is going to change depending on what "state" the AI is in. So you could imagine this flow:
 
@@ -19,17 +20,18 @@ Now, there are "edges" between these states. For example, we do not transition b
 
 So we stay in a state until the "Edge condition is met". In this situation, we might have the following edge conditions:
 
-`Introduction -> Make Sale: Transition immediately after the customer tells you how their day is`
-
-`Make sale -> Collect address: Transition when the customer agrees to purchasing the product.`
-
-`Collect address -> Finalize Sale: Transition after the customer provides their full address (every required piece)`
+```
+Introduction -> Make Sale: Transition immediately after the customer tells you how their day is
+Make sale -> Collect address: Transition when the customer agrees to purchasing the product.
+Collect address -> Finalize Sale: Transition after the customer provides their full address (every required piece)
+```
 
 So if the global prompt was:
 `Your name is Jason, always be nice.`
 
 And we are in the introduction state, then the full prompt would be:
-```Your name is Jason, always be nice.
+```
+Your name is Jason, always be nice.
 The goal of this state is to say hi to the customer and ask how their day is going
 ```
 
